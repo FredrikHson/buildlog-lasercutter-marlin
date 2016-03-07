@@ -34,7 +34,7 @@ void laser_timer_init(int pin)
 
     switch(digitalPinToTimer(pin))
     {
-       #ifdef TCCR0A
+            #ifdef TCCR0A
 
         case TIMER0A:
         case TIMER0B:
@@ -219,7 +219,7 @@ void laser_fire(int intensity = 100.0)
     }
 
     pinMode(LASER_FIRING_PIN, OUTPUT);
-    analogWrite(LASER_INTENSITY_PIN, labs((intensity / 100.0) * (F_CPU / LASER_PWM)));
+    analogWrite(LASER_INTENSITY_PIN, labs((intensity / 100.0) * (255.0)));
     WRITE(LASER_FIRING_PIN, LOW);
 
     if(laser.diagnostics)
