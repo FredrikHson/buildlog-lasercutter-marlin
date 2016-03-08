@@ -6,7 +6,7 @@ Turnkey K40 Laser Arduino + Ramps Firmware
 An example of this firmware in action : https://www.youtube.com/watch?v=6DKSxDIkqoA
 
 Based off Marlin for 3D printers, for more info see https://github.com/MarlinFirmware/Marlin
-Original credits for building this firmware from stock Marlin go to THinkscape and Lansing Makers Network and John for help with raster support. 
+Original credits for building this firmware from stock Marlin go to THinkscape and Lansing Makers Network and John for help with raster support.
 This firmware is based on their foundation work.
 
 This firmware is designed to be used in conjunction with my Inkscape 0.91 gcode exporter https://github.com/TurnkeyTyranny/laser-gcode-exporter-inkscape-plugin
@@ -15,7 +15,7 @@ You can contact me via email at : 394ad2f@gmail.com, I check my email daily usua
 
 Donations
 ---------
-Find this software useful? Donations are gratefully appreciated. 
+Find this software useful? Donations are gratefully appreciated.
 
 * Paypal to 394ad2f@gmail.com
 * Bitcoins to 16TFmnFyvDA8Q6TTakvvhargy8c89Rb3cj
@@ -194,6 +194,7 @@ M Codes
 *  M220 S<factor in percent>- set speed factor override percentage
 *  M221 S<factor in percent>- set extrude factor override percentage
 *  M240 - Trigger a camera to take a photograph
+*  M256 - Test Fire S<power> T<milliseconds>
 *  M280 - Position an RC Servo P<index> S<angle/microseconds>, ommit S to report back current angle
 *  M300 - Play beepsound S<frequency Hz> P<duration ms>
 *  M301 - Set PID parameters P I and D
