@@ -786,6 +786,8 @@ void process_commands()
             case 0:
                 if(Stopped == false)
                 {
+                    laser.status = LASER_OFF;
+                    feedrate = homing_feedrate[X_AXIS];
                     get_coordinates(); // For X Y Z E F
                     prepare_move();
                     //ClearToSend();
@@ -1061,6 +1063,8 @@ void process_commands()
             case 28: //G28 Home all Axis one at a time
                 saved_feedrate = feedrate;
                 saved_feedmultiply = feedmultiply;
+                feedrate = homing_feedrate[X_AXIS];
+                laser.status = LASER_OFF;
                 feedmultiply = 100;
                 previous_millis_cmd = millis();
 
