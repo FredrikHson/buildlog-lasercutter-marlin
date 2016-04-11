@@ -12,7 +12,7 @@
 
 #define LARGE_FLASH true // only for beeping
 
-#define X_STEP_PIN         16 
+#define X_STEP_PIN         16
 #define X_DIR_PIN          15
 #define X_STOP_PIN         11
 

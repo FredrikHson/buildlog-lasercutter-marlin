@@ -25,7 +25,7 @@
 // 2 = atmega1284p(custom FredrikHson)
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 2
+    #define MOTHERBOARD 2
 #endif
 // Define this to set a custom name for your generic Mendel,
 // #define CUSTOM_MENDEL_NAME "This Mendel"
