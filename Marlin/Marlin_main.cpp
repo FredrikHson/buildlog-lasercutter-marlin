@@ -786,12 +786,13 @@ void process_commands()
             case 0:
                 if(Stopped == false)
                 {
-                    laser.status = LASER_OFF;
 
+                    get_coordinates(); // For X Y Z E F
+
+                    laser.status = LASER_OFF;
                     saved_feedrate = feedrate;
                     feedrate = homing_feedrate[X_AXIS];
 
-                    get_coordinates(); // For X Y Z E F
                     prepare_move();
 
                     feedrate = saved_feedrate;
