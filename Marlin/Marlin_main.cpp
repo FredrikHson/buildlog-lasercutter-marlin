@@ -787,9 +787,14 @@ void process_commands()
                 if(Stopped == false)
                 {
                     laser.status = LASER_OFF;
+
+                    saved_feedrate = feedrate;
                     feedrate = homing_feedrate[X_AXIS];
+
                     get_coordinates(); // For X Y Z E F
                     prepare_move();
+
+                    feedrate = saved_feedrate;
                     //ClearToSend();
                     return;
                 }
